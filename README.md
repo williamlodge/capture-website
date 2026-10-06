@@ -58,7 +58,9 @@ docker run -p 3000:3000 captureweb
 ```
 
 The Dockerfile uses a two-stage build and installs system Chromium in the
-runtime image (`PUPPETEER_SKIP_DOWNLOAD=true`).
+runtime image (`PUPPETEER_SKIP_DOWNLOAD=true`). `package-lock.json` is not
+committed — builds use `npm install`; run `npm install` locally after
+cloning to generate your own lockfile.
 
 ## API
 

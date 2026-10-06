@@ -12,8 +12,8 @@ WORKDIR /app
 # Skip puppeteer's Chrome download — the runtime image ships system Chromium
 ENV PUPPETEER_SKIP_DOWNLOAD=true
 
-COPY package.json package-lock.json ./
-RUN npm ci --no-audit --no-fund
+COPY package.json ./
+RUN npm install --no-audit --no-fund
 
 COPY . .
 
